@@ -3,7 +3,7 @@ Lita.configure do |config|
   config.robot.name = "Slash"
 
   # The locale code for the language to use.
-  # config.robot.locale = :en
+  config.robot.locale = :es
 
   # The severity of messages to log. Options are:
   # :debug, :info, :warn, :error, :fatal
@@ -17,7 +17,14 @@ Lita.configure do |config|
 
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
-  config.robot.adapter = :shell
+  config.robot.adapter = :slack
+  config.robot.admins = ["U0F4J1J2V"]
+  config.adapters.slack.token = "xoxb-83724726320-cWQ2tciccSECfzq4nF6UzcY3"
+
+  config.adapters.slack.link_names = true
+  config.adapters.slack.parse = "full"
+  config.adapters.slack.unfurl_links = true
+  config.adapters.slack.unfurl_media = true
 
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
